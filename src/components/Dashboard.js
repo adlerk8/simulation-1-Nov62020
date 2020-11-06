@@ -1,23 +1,14 @@
 import React, {Component} from 'react';
 import Product from './Product';
 
-class Dashboard extends Component {
-    constructor() {
-        super();
+function Dashboard() {
 
-        this.state = {
+    return (
+        <div>dashboard component
+            <Product/>
+        </div>
 
-        }
-    }
-
-    render() {
-        return (
-            <div>dashboard component
-                <Product/>
-            </div>
-
-        )
-    }
+    )
 };
 
 export default Dashboard;

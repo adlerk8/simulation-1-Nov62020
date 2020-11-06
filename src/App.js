@@ -9,16 +9,30 @@ class App extends Component {
     super();
 
     this.state = {
-      inventory: []
+      inventory: [
+        {name: 'beans',
+        price: 2,
+        imgurl: 'https://unsplash.com/photos/FW7Amhh_B8A'},
+        {name: 'mushroom',
+        price: 1,
+        imgurl: 'https://unsplash.com/photos/fiuIhECcnv8'},
+        {name: 'horse',
+        price: 4,
+        imgurl: 'https://unsplash.com/photos/xcvMhWJe-qQ'}
+      ]
     }
   }
   
+  addToInventory = () => {
+    let productPush = [...this.state.inventory];
+    productPush.push()
+  }
 
   render() {
     return (
       <div className="App">
         <Header/>
-        <Dashboard/>
+        <Dashboard inventory={this.state.inventory}/>
         <Form/>
       </div>
     );
