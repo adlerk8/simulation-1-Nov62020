@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class Product extends Component {
     constructor() {
-        supoer();
+        super();
 
         this.state = {
 

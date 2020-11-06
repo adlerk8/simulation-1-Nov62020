@@ -3,7 +3,7 @@ import Product from './Product';
 
 class Dashboard extends Component {
     constructor() {
-        supoer();
+        super();
 
         this.state = {
 
