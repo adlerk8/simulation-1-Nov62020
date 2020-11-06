@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import './App.css';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
@@ -9,20 +10,18 @@ class App extends Component {
     super();
 
     this.state = {
-      inventory: [
-        {productName: 'beans',
-        price: 2,
-        imgurl: 'https://unsplash.com/photos/FW7Amhh_B8A'},
-        {productName: 'mushroom',
-        price: 1,
-        imgurl: 'https://unsplash.com/photos/fiuIhECcnv8'},
-        {productName: 'horse',
-        price: 4,
-        imgurl: 'https://unsplash.com/photos/xcvMhWJe-qQ'}
-      ]
+      inventory: []
     }
   }
   
+  componentDidMount() {
+    axios.get('/api/iventory')
+    .then((res) => {
+      this.setState({inventory: res.data})
+    })
+    .catch((err) => console.log(err))
+  }
+
   addToInventory = (product) => {
     let productPush = [...this.state.inventory];
     productPush.push(product);

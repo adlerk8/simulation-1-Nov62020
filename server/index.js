@@ -9,6 +9,8 @@ app.use(express.json());
 
 app.get('/api/inventory', ctrl.getInventory);
 
+app.post('/api/product', ctrl.addProduct);
+
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnauthorized: false}
