@@ -26,6 +26,7 @@ class App extends Component {
   addToInventory = () => {
     let productPush = [...this.state.inventory];
     productPush.push()
+    this.setState({inventory: productPush})
   }
 
   render() {
@@ -33,7 +34,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <Dashboard inventory={this.state.inventory}/>
-        <Form/>
+        <Form addInventory={this.addToInventory}/>
       </div>
     );
   }
