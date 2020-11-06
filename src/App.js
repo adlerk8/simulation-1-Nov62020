@@ -11,7 +11,6 @@ function App() {
       <Header/>
       <Dashboard/>
       <Form/>
-      <Product/>
     </div>
   );
 }
