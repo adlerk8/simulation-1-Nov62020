@@ -10,13 +10,13 @@ class App extends Component {
 
     this.state = {
       inventory: [
-        {name: 'beans',
+        {productName: 'beans',
         price: 2,
         imgurl: 'https://unsplash.com/photos/FW7Amhh_B8A'},
-        {name: 'mushroom',
+        {productName: 'mushroom',
         price: 1,
         imgurl: 'https://unsplash.com/photos/fiuIhECcnv8'},
-        {name: 'horse',
+        {productName: 'horse',
         price: 4,
         imgurl: 'https://unsplash.com/photos/xcvMhWJe-qQ'}
       ]

@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Product from './Product';
 
 function Dashboard(props) {
     return (
         <ul>
             <li>{props.inventory.map((e) => {
-                return <Product key={e.id} product={e}/>})}
+                return <Product key={e.name} product={e}/>})}
             </li>
         </ul>
     )
