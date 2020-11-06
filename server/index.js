@@ -6,6 +6,9 @@ const {SERVER_PORT, CONNECTION_STRING} = process.env;
 const ctrl = require('./controller'); 
 app.use(express.json());
 
+
+app.get('/api/inventory', ctrl.getInventory);
+
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnauthorized: false}
