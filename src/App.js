@@ -23,10 +23,10 @@ class App extends Component {
     }
   }
   
-  addToInventory = () => {
+  addToInventory = (product) => {
     let productPush = [...this.state.inventory];
-    productPush.push()
-    this.setState({inventory: productPush})
+    productPush.push(product);
+    this.setState({inventory: productPush});
   }
 
   render() {
